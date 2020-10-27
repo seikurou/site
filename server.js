@@ -4,6 +4,11 @@ const mongoose = require('mongoose')
 const app = express()
 const ShortUrl = require('./models/shortUrl')
 
+if (process.env.NODE_ENV == 'production') {
+    const enforce = require('express-sslify')
+    app.use(enforce.HTTPS({trustProtoHeader: true }))
+}
+
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
   }
