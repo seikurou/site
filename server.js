@@ -1,6 +1,7 @@
 const express = require('express')
 const helmet = require('helmet')
 const path = require('path')
+const app = express()
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
@@ -9,7 +10,6 @@ if (process.env.NODE_ENV !== 'production') {
     app.use(enforce.HTTPS({ trustProtoHeader: true }))
 }
 
-const app = express()
 // const app = require("https-localhost")()
 
 app.use(express.static(path.join(__dirname, 'client/build')));
