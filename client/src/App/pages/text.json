@@ -1,0 +1,12 @@
+{
+    "about": [
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus."
+    ],
+    "greeting": "Hello!",
+    "introSentence": "I'm Edmond,",
+    "headline": "and I'm interested in all things tech, especially things that make people's lives easier. Check out my projects!",
+    "email": "edmond.fang@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/edmond-fang/",
+    "github": "https://github.com/seikurou"
+}

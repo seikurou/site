@@ -1,50 +1,40 @@
 const express = require('express')
-const {MongoClient} = require('mongodb');
-const mongoose = require('mongoose')
-const app = express()
-const ShortUrl = require('./models/shortUrl')
-
-if (process.env.NODE_ENV == 'production') {
-    const enforce = require('express-sslify')
-    app.use(enforce.HTTPS({trustProtoHeader: true }))
-}
+const helmet = require('helmet')
+const path = require('path')
 
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
-  }
+} else {
+    const enforce = require('express-sslify')
+    app.use(enforce.HTTPS({ trustProtoHeader: true }))
+}
 
-mongoose.connect(process.env.MONGODB_URLSHORT, {
-    useNewUrlParser: true, useUnifiedTopology: true
-})
+const app = express()
+// const app = require("https-localhost")()
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+const api_route = require('./api')
 
 app.set('view engine', 'ejs')
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }))
+app.use(helmet())
 
+app.use('/api', api_route)
 
-app.get('/',  async (req, res) => {
-    const shortUrls = await ShortUrl.find()
+app.get('/shortener', async (req, res) => {
+
     // res.render('index')
 
-    res.render('index', {shortUrls: shortUrls})
+    res.render('shortener', { shortUrls: [] })
 })
 
-app.post('/shortUrls', async (req, res) => {
-    // console.log(req.body.fullUrl)
-    await ShortUrl.create({full: req.body.fullUrl})
-    res.redirect('/')
+app.get('/:shortUrl([a-zA-Z0-9_\-]{5})', async (req, res) => {
+    res.redirect('/api/redirect/' + req.params.shortUrl)
 })
 
-app.get('/:shortUrl', async (req, res) => {
-    const shortUrl = await ShortUrl.findOne({short: req.params.shortUrl})
-    if (shortUrl == null) {
-        // console.log("not found")
-        return res.sendStatus(404)
-    }
-
-    shortUrl.clicks++
-    shortUrl.save()
-
-    res.redirect(shortUrl.full)
-})
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
+});
 
 app.listen(process.env.PORT || 5000);
