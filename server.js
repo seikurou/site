@@ -17,18 +17,19 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 const api_route = require('./api')
 
-app.set('view engine', 'ejs')
+// app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 app.use(helmet())
 
 app.use('/api', api_route)
 
-app.get('/shortener', async (req, res) => {
+// app.get('/shortener', async (req, res) => {
 
-    // res.render('index')
+//     // res.render('index')
 
-    res.render('shortener', { shortUrls: [] })
-})
+//     res.render('shortener', { shortUrls: [] })
+// })
 
 app.get('/:shortUrl([a-zA-Z0-9_\-]{5})', async (req, res) => {
     res.redirect('/api/redirect/' + req.params.shortUrl)

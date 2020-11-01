@@ -9,21 +9,21 @@ mongoose.connect(process.env.MONGODB_URLSHORT, {
 const router = express.Router()
 
 router.post('/new_short_url', async (req, res) => {
-    // console.log(req.body.fullUrl)
-    const newdoc = await ShortUrl.create({full: req.body.fullUrl})
-    res.json({shortened: newdoc.short})
+    const newdoc = await ShortUrl.create({long: req.body.longUrl})
+    res.json({shortUrl: newdoc.short})
+    // console.log({shortened: newdoc.short})
 })
 
 router.get('/redirect/:shortUrl', async (req, res) => {
     const shortUrl = await ShortUrl.findOne({short: req.params.shortUrl})
     if (shortUrl == null) {
-        // console.log("not found")
+        console.log("not found")
         return res.sendStatus(404)
     }
 
     shortUrl.clicks++
     shortUrl.save()
 
-    res.redirect(shortUrl.full)
+    res.redirect(shortUrl.long)
 })
 module.exports = router

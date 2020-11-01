@@ -11,18 +11,18 @@ const SiteNavbar = () => {
   return (
     <div>
       <Navbar color="light" light expand="xs">
-        <Link className="navbar-brand" to={'./'}>
+        <Link className="navbar-brand" to={'/'}>
           efang.me
         </Link>
         {/* <NavbarToggler onClick={toggle} /> */}
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <Link to='./aboutself' className="nav-link">
+            <Link to='/aboutself' className="nav-link">
               About
             </Link>
           </NavItem>
           <NavItem>
-            <Link to='./projects' className="nav-link">
+            <Link to='/projects' className="nav-link">
               Projects
             </Link>
           </NavItem>
