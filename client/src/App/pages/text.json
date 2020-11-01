@@ -1,12 +1,51 @@
 {
     "about": [
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus."
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
+
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus."
     ],
     "greeting": "Hello!",
     "introSentence": "I'm Edmond,",
     "headline": "and I'm interested in all things tech, especially things that make people's lives easier. Check out my projects!",
     "email": "edmond.fang@gmail.com",
     "linkedin": "https://www.linkedin.com/in/edmond-fang/",
-    "github": "https://github.com/seikurou"
+    "github": "https://github.com/seikurou",
+    "projects": [
+        {
+            "title": "Personal Website",
+            "catchPhrase": "What you're looking at right now.",
+            "imageLink": "/assets/cat.jpg",
+            "imageAlt": "Website logo.",
+            "description": "A responsive website that gave me plenty of practice using React and Bootstrap. Avoided CSS at all costs. Hosted on Heroku. Runs Express on Node.js. Other projects use the API which connects to a MongoDB Atlas database. I only paid money for this domain. Everything else was free, for now.",
+            "internalLinkText": "",
+            "internalLink": "",
+            "externalLinkText": "Github source code",
+            "externalLink": "https://github.com/seikurou/site"
+        },
+        {
+            "title": "Personal website",
+            "catchPhrase": "What you're looking at right now.",
+            "imageLink": "",
+            "imageAlt": "Website logo.",
+            "description": "A respon for this domain, everything else was free.",
+            "internalLinkText": "",
+            "internalLink": "",
+            "externalLinkText": "Github source code",
+            "externalLink": "https://github.com/seikurou/site"
+        },
+        {
+            "title": "Personal Website",
+            "catchPhrase": "What you're looking at right now.",
+            "imageLink": "",
+            "imageAlt": "Website logo.",
+            "description": "A respon for this domain, everything else was free.",
+            "internalLinkText": "",
+            "internalLink": "",
+            "externalLinkText": "Github source code",
+            "externalLink": "https://github.com/seikurou/site"
+        }
+    ]
 }

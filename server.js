@@ -13,6 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 // const app = require("https-localhost")()
 
 app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'static')));
 
 const api_route = require('./api')
 

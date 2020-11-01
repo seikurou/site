@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Jumbotron } from 'reactstrap'
 import FadeIn from 'react-fade-in';
 // import { json } from 'express';
 import json from './text.json'
@@ -32,9 +30,9 @@ class HomePage extends Component {
           <div className="container mt-5">
             <div className="row">
               <div className="col">
-                <a href={"mailto:" + json.email} target="_blank"><FontAwesomeIcon icon={faEnvelope} size="3x" className="mr-3 text-white" /></a>
-                <a href={json.linkedin} target="_blank"><FontAwesomeIcon icon={faLinkedin} size="3x" className="mr-3 text-white" /></a>
-                <a href={json.github} target="_blank"><FontAwesomeIcon icon={faGithub} size="3x" className="text-white" /></a>
+                <a href={"mailto:" + json.email} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faEnvelope} size="3x" className="mr-3 text-white" /></a>
+                <a href={json.linkedin} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} size="3x" className="mr-3 text-white" /></a>
+                <a href={json.github} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} size="3x" className="text-white" /></a>
               </div>
             </div>
           </div>
