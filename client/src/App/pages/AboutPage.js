@@ -16,7 +16,7 @@ class AboutPage extends Component {
           <Jumbotron className="mt-3" >
             <div className="container">
               <FadeIn>
-                <div className="row justify-content-center align-items-center">
+                <div className="row justify-content-center align-items-center mb-5">
                   <div className="col-sm-6 col-lg-4">
                     <h1 className="display-4">About</h1>
                   </div>

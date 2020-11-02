@@ -1,11 +1,10 @@
 {
     "about": [
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus.",
-
-         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in ipsum nec sapien imperdiet tempus. Fusce dignissim ex et facilisis posuere. Phasellus tristique interdum dui non pretium. Mauris feugiat, risus id facilisis consequat, mi purus rutrum nibh, ut consequat lorem dolor id ante. Nunc semper leo nec ante rhoncus, vitae laoreet mi sodales. Etiam cursus leo in tortor tincidunt, tempor pretium metus bibendum. Aenean imperdiet elementum elit. Vivamus sit amet turpis ultrices, hendrerit magna eu, faucibus metus."
+         "Hi! I'm Edmond. I'm currently purusing a B.A. in Computer Science from the University of California, Berkeley, studying at home in San Diego. I plan to graduate in May 2022.",
+         "My main interests lie in tinkering to make life easier, which often combine both software and hardware. While I like to use hardware, I love to create software. I primarily use Python, although I've also had experience in Java, JavaScript, C, and C++. In web devlopment, I've used tools such as React, Node.js, Bootstrap, Express, MongoDB, and REST APIs to make things work.",
+         "This semester, I help conduct research at UC Berkeley's RISE Lab. There, I explore the possibilities of end-to-end machine learning models on self-driving cars. I collect training data using a simulator as well as train models using PyTorch.",
+         "In my spare time, I like to tinker with and explore new technologies. In the past, I've built quadcopters from scratch and used open-source firmware. These days, I enjoy working with IoT and am always considering what I can do next.",
+         "In my free time, I enjoy hiking, playing tennis, and trying new foods. Occasionally, I might learn a new song on the piano, fold some intricate origami, or just draw and color something completely random."
     ],
     "greeting": "Hello!",
     "introSentence": "I'm Edmond,",
@@ -14,9 +13,20 @@
     "linkedin": "https://www.linkedin.com/in/edmond-fang/",
     "github": "https://github.com/seikurou",
     "projects": [
+                {
+            "title": "Remote Garage Control",
+            "catchPhrase": "Lives inside a Pyrex container.",
+            "imageLink": "/assets/garage-esp-img.jpg",
+            "imageAlt": "esp8266 and a relay switch",
+            "description": "Using Blynk's API and under 5 dollars of hardware, I'm able to open my garage from my phone! No need to purchase or carry remotes! An ultrasonic sensor checks if the garage is open. I use this site to store garage status and cycle history, which you can view in a small React app.",
+            "internalLinkText": "See it live!",
+            "internalLink": "/garagecontrol",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/seikurou/remote_garage_control"
+        },
         {
             "title": "Personal Website",
-            "catchPhrase": "Stares at your face.",
+            "catchPhrase": "Is staring at your face.",
             "imageLink": "/assets/cat.jpg",
             "imageAlt": "Cat looking at you",
             "description": "A responsive website that gave me plenty of practice using React and Bootstrap. Hosted on Heroku. Runs Express on Node.js. Other projects run on this site. Interestingly, I only had to pay money for this domain.",
@@ -24,28 +34,6 @@
             "internalLink": "",
             "externalLinkText": "Github",
             "externalLink": "https://github.com/seikurou/site"
-        },
-        {
-            "title": "URL Shortener",
-            "catchPhrase": "Shortens well-formatted URLs.",
-            "imageLink": "/assets/shortener-logo.png",
-            "imageAlt": "Shortener logo.",
-            "description": "This URL shortener does its job, and in my opinion, looks nice. It runs on this site with create-react-app as the front end, which calls an API to generate shortened URLs. I use a MongoDB Atlas database to store everything.",
-            "internalLinkText": "Try it out!",
-            "internalLink": "/shortener",
-            "externalLinkText": "Github",
-            "externalLink": "https://github.com/seikurou/site"
-        },
-        {
-            "title": "Remote Garage Control",
-            "catchPhrase": "Lives inside a Pyrex container.",
-            "imageLink": "/assets/garage-esp-img.jpg",
-            "imageAlt": "esp8266 and a relay switch",
-            "description": "Using Blynk's API and under 5 dollars of hardware, I'm able to open my garage from my phone! An ultrasonic sensor checks if the garage is open. I use this site to store garage status and cycle history, which you can view in a small React app.",
-            "internalLinkText": "See it live!",
-            "internalLink": "/garagecontrol",
-            "externalLinkText": "Github",
-            "externalLink": "https://github.com/seikurou/remote_garage_control"
         },
         {
             "title": "Temperature Monitor",
@@ -57,6 +45,17 @@
             "internalLink": "/weathermonitor",
             "externalLinkText": "",
             "externalLink": ""
+        },
+        {
+            "title": "URL Shortener",
+            "catchPhrase": "Shortens well-formatted URLs.",
+            "imageLink": "/assets/shortener-logo.png",
+            "imageAlt": "Shortener logo.",
+            "description": "This URL shortener does its job, and in my opinion, looks nice. It runs on this site with create-react-app as the front end, which calls an API to generate shortened URLs. I use a MongoDB Atlas database to store everything.",
+            "internalLinkText": "Try it out!",
+            "internalLink": "/shortener",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/seikurou/site"
         },
         {
             "title": "Gitlet",
