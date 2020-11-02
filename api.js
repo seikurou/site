@@ -23,16 +23,18 @@ router.post('/logdata/:apikey/:dtype', async (req, res) => {
     if (req.params.apikey == process.env.DATA_WRITE_KEY) {
         switch (req.params.dtype) {
             case 'temperature':
-                if (!('celsius' in req.body && typeof req.body.celsius === 'number')) {
+                try {
+                await Temperature.create({celsius: Number(req.body.celsius)})
+                } catch {
                     res.sendStatus(400)
                 }
-                await Temperature.create({celsius: req.body.celsius})
                 break
             case 'garage':
-                if (!('open' in req.body && typeof req.body.open === 'number')) {
+                try {
+                await GarageState.create({open: Boolean(Number(req.body.open))})
+                } catch {
                     res.sendStatus(400)
                 }
-                await GarageState.create({open: Boolean(req.body.open)})
                 break
             default:
                 res.sendStatus(404)
