@@ -1,6 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const ShortUrl = require('./models/shortUrl')
+const Temperature = require('./models/temperature')
+const GarageState = require('./models/garageState')
 
 mongoose.connect(process.env.MONGODB_URLSHORT, {
     useNewUrlParser: true, useUnifiedTopology: true
@@ -9,13 +11,41 @@ mongoose.connect(process.env.MONGODB_URLSHORT, {
 const router = express.Router()
 
 router.post('/new_short_url', async (req, res) => {
-    const newdoc = await ShortUrl.create({long: req.body.longUrl})
-    res.json({shortUrl: newdoc.short})
+    if (!('longUrl' in req.body)) {
+        res.sendStatus(400)
+    }
+    const newdoc = await ShortUrl.create({ long: req.body.longUrl })
+    res.json({ shortUrl: newdoc.short })
     // console.log({shortened: newdoc.short})
 })
 
+router.post('/logdata/:apikey/:dtype', async (req, res) => {
+    if (req.params.apikey == process.env.DATA_WRITE_KEY) {
+        switch (req.params.dtype) {
+            case 'temperature':
+                if (!('celsius' in req.body && typeof req.body.celsius === 'number')) {
+                    res.sendStatus(400)
+                }
+                await Temperature.create({celsius: req.body.celsius})
+                break
+            case 'garage':
+                if (!('open' in req.body && typeof req.body.open === 'number')) {
+                    res.sendStatus(400)
+                }
+                await GarageState.create({open: Boolean(req.body.open)})
+                break
+            default:
+                res.sendStatus(404)
+        }
+        res.sendStatus(200)
+    } else {
+        res.sendStatus(403)
+    }
+
+})
+
 router.get('/redirect/:shortUrl', async (req, res) => {
-    const shortUrl = await ShortUrl.findOne({short: req.params.shortUrl})
+    const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
     if (shortUrl == null) {
         console.log("not found")
         return res.sendStatus(404)
