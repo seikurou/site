@@ -21,7 +21,7 @@ class AboutPage extends Component {
                     <h1 className="display-4">About</h1>
                   </div>
                   <div className="col-sm-6 col-lg-4">
-                    <img src="/logo192.png" alt="Me" className="d-block mx-auto" />
+                    <img src="/assets/me.jpg" alt="Me" className="img-fluid d-block mx-auto rounded-circle" />
                   </div>
                 </div>
                 {json.about.map((para, i) => {

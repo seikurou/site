@@ -51,7 +51,7 @@ class UrlShortenerPage extends Component {
                   <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                       <label htmlFor="longUrl" className="sr-only">Enter URL</label>
-                      <input required type="url" className="form-control" id="longUrl" value={this.state.longUrl} onChange={this.handleChange} placeholder="Enter URL" />
+                      <input required type="url" className="form-control" id="longUrl" value={this.state.longUrl} onChange={this.handleChange} placeholder="Enter URL (Should start with http[s]://)" />
                     </div>
                     <button className="btn btn-success">
                       {this.state.loading ? <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

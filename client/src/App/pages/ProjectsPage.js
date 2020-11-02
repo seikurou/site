@@ -18,7 +18,7 @@ class ProjectsPage extends Component {
             <div className="row justify-content-center ">
               <div className="col-10 col-lg-8 col-xl-10 ">
                 <div className="fluid-container">
-                  <div className="row justify-content-center align-items-center">
+                  <div className="row justify-content-center">
                     {json.projects.map((proj, i) => {
                       return (
                         <div key={i} className="col-lg-6 col-xl-4 mb-3">

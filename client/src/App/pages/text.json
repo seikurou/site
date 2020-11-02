@@ -16,36 +16,80 @@
     "projects": [
         {
             "title": "Personal Website",
-            "catchPhrase": "What you're looking at right now.",
+            "catchPhrase": "Stares at your face.",
             "imageLink": "/assets/cat.jpg",
-            "imageAlt": "Website logo.",
-            "description": "A responsive website that gave me plenty of practice using React and Bootstrap. Avoided CSS at all costs. Hosted on Heroku. Runs Express on Node.js. Other projects use the API which connects to a MongoDB Atlas database. I only paid money for this domain. Everything else is free, for now.",
+            "imageAlt": "Cat looking at you",
+            "description": "A responsive website that gave me plenty of practice using React and Bootstrap. Hosted on Heroku. Runs Express on Node.js. Other projects run on this site. Interestingly, I only had to pay money for this domain.",
             "internalLinkText": "",
             "internalLink": "",
-            "externalLinkText": "Github source code",
+            "externalLinkText": "Github",
             "externalLink": "https://github.com/seikurou/site"
         },
         {
             "title": "URL Shortener",
-            "catchPhrase": "A shortener for URLs.",
-            "imageLink": "",
-            "imageAlt": "Website logo.",
-            "description": "A respon for this domain, everything else was free.",
+            "catchPhrase": "Shortens well-formatted URLs.",
+            "imageLink": "/assets/shortener-logo.png",
+            "imageAlt": "Shortener logo.",
+            "description": "This URL shortener does its job, and in my opinion, looks nice. It runs on this site with create-react-app as the front end, which calls an API to generate shortened URLs. I use a MongoDB Atlas database to store everything.",
             "internalLinkText": "Try it out!",
             "internalLink": "/shortener",
-            "externalLinkText": "Github source code",
+            "externalLinkText": "Github",
             "externalLink": "https://github.com/seikurou/site"
         },
         {
-            "title": "Personal Website",
-            "catchPhrase": "What you're looking at right now.",
-            "imageLink": "",
-            "imageAlt": "Website logo.",
-            "description": "A respon for this domain, everything else was free.",
+            "title": "Remote Garage Control",
+            "catchPhrase": "Lives inside a Pyrex container.",
+            "imageLink": "/assets/garage-esp-img.jpg",
+            "imageAlt": "esp8266 and a relay switch",
+            "description": "Using Blynk's API and under 5 dollars of hardware, I'm able to open my garage from my phone! An ultrasonic sensor checks if the garage is open. I use this site to store garage status and cycle history, which you can view in a small React app.",
+            "internalLinkText": "See it live!",
+            "internalLink": "/garagecontrol",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/seikurou/remote_garage_control"
+        },
+        {
+            "title": "Temperature Monitor",
+            "catchPhrase": "Lives outside the Pyrex container.",
+            "imageLink": "/assets/dht11.jpg",
+            "imageAlt": "dht11 sensor",
+            "description": "Here, I log temperature data every fifteen minutes and save it using this website's API. Current temperature and data visualization is available on this site.",
+            "internalLinkText": "It's alive!",
+            "internalLink": "/weathermonitor",
+            "externalLinkText": "",
+            "externalLink": ""
+        },
+        {
+            "title": "Gitlet",
+            "catchPhrase": "Tracks files, but not directories.",
+            "imageLink": "/assets/gitlet-logo.png",
+            "imageAlt": "gitlet logo",
+            "description": "A project written in Java, supporting around 13 git commands. The program was written from scratch based on a very detailed project specification. Since this was in Java, I designed things using OOP principles. I also had to write quite a few unit and integration tests.",
             "internalLinkText": "",
             "internalLink": "",
-            "externalLinkText": "Github source code",
-            "externalLink": "https://github.com/seikurou/site"
+            "externalLinkText": "Spec",
+            "externalLink": "https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/proj/proj3/"
+        },
+        {
+            "title": "School Pathfinder",
+            "catchPhrase": "Makes you climb hills and stairs.",
+            "imageLink": "/assets/school-pathfinder.jpg",
+            "imageAlt": "example path",
+            "description": "I used a shortest-paths algorithm to draw routes onto satellite images of the school.",
+            "internalLinkText": "",
+            "internalLink": "",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/seikurou/school_pathfinder"
+        },
+        {
+            "title": "TankInfinity",
+            "catchPhrase": "Works you to death.",
+            "imageLink": "/assets/tankinfinity-gameplay.png",
+            "imageAlt": "Website logo.",
+            "description": "In a four-person group, I helped make a 2D survival shooter game written using LibGDX, an open-source game engine. Levels get progressively difficult until you lose. Download it under \"Releases!\"",
+            "internalLinkText": "",
+            "internalLink": "",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/The-Church-of-Daniel-Pham/TankInfinity"
         }
     ]
 }
