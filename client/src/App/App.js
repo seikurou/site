@@ -6,6 +6,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import SiteNavbar from './pages/SiteNavbar';
 import HomePage from './pages/HomePage';
 import UrlShortenerPage from './pages/UrlShortenerPage';
+import GarageControlPage from './pages/GarageControlPage'
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path='/' component ={HomePage}></Route>
           <Route exact path='/projects' component={ProjectsPage}/>
           <Route exact path='/shortener' component={UrlShortenerPage}/>
+          <Route exact path='/garagecontrol' component={GarageControlPage}/>
         </Switch>
       </div>
     )

@@ -24,14 +24,14 @@ router.post('/logdata/:apikey/:dtype', async (req, res) => {
         switch (req.params.dtype) {
             case 'temperature':
                 try {
-                await Temperature.create({celsius: Number(req.body.celsius)})
+                    await Temperature.create({ celsius: Number(req.body.celsius) })
                 } catch {
                     res.sendStatus(400)
                 }
                 break
             case 'garage':
                 try {
-                await GarageState.create({open: Boolean(Number(req.body.open))})
+                    await GarageState.create({ open: Boolean(Number(req.body.open)) })
                 } catch {
                     res.sendStatus(400)
                 }
@@ -44,6 +44,27 @@ router.post('/logdata/:apikey/:dtype', async (req, res) => {
         res.sendStatus(403)
     }
 
+})
+
+router.get('/getdata/is_garage_open', async (req, res) => {
+    GarageState.find().sort("-time").limit(1).exec((error, data) => {
+        if (error) {
+            res.sendStatus(400)
+        } else {
+            res.json(data[0])
+        }
+    })
+
+})
+
+router.get('/getdata/all_garage_data', async (req, res) => {
+    GarageState.find().sort("time").exec((error, data) => {
+        if (error) {
+            res.sendStatus(400)
+        } else {
+            res.json(data)
+        }
+    })
 })
 
 router.get('/redirect/:shortUrl', async (req, res) => {
