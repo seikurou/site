@@ -20,7 +20,7 @@
             "imageAlt": "esp8266 and a relay switch",
             "description": "Using Blynk's API and under 5 dollars of hardware, I'm able to open my garage from my phone! No need to purchase or carry remotes! An ultrasonic sensor checks if the garage is open. The hardware is programmed using C++ in Arduino. I use this site to store garage status and cycle history, which you can view in a small React app.",
             "internalLinkText": "See it live!",
-            "internalLink": "/garagecontrol",
+            "internalLink": "/garage",
             "externalLinkText": "Github",
             "externalLink": "https://github.com/seikurou/remote_garage_control"
         },
