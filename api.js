@@ -67,6 +67,27 @@ router.get('/getdata/all_garage_data', async (req, res) => {
     })
 })
 
+router.get('/getdata/current_temperature', async (req, res) => {
+    Temperature.find().sort("-time").limit(1).exec((error, data) => {
+        if (error) {
+            res.sendStatus(400)
+        } else {
+            res.json(data[0])
+        }
+    })
+
+})
+
+router.get('/getdata/all_temperature_data', async (req, res) => {
+    Temperature.find().sort("time").exec((error, data) => {
+        if (error) {
+            res.sendStatus(400)
+        } else {
+            res.json(data)
+        }
+    })
+})
+
 router.get('/redirect/:shortUrl', async (req, res) => {
     const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
     if (shortUrl == null) {

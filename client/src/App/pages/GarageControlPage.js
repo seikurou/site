@@ -45,7 +45,7 @@ class GarageControlPage extends Component {
         <div className="fluid-container" style={{ overflowX: "hidden" }}>
           <div className="row justify-content-center my-3">
             <div className="col-10 col-lg-8">
-              <div className="card">
+              <div className="card bg-light">
                 <h1 className="card-header display-4 text-center">Garage</h1>
                 <div className="card-body text-center">
                   <button className="btn btn-primary mb-3" onClick={this.handleRefresh}>
@@ -66,7 +66,7 @@ class GarageControlPage extends Component {
           </div>
           <div className="row justify-content-center">
             <div className="col-10 col-lg-8">
-              <p>hi</p>
+              <p>Unfortunately, you cannot control the garage from this site. For security reasons. Not because it's difficult or something. Yep.</p>
             </div>
           </div>
         </div>
