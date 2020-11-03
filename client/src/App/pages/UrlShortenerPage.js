@@ -81,7 +81,7 @@ class UrlShortenerPage extends Component {
                             <a href={links[1]}><code className="border bg-light rounded text-danger">{"efang.me/" + links[1]}</code></a>
                           </div>
                           <div className="col text-right">
-                            <button className="btn btn-primary" onClick={() => {navigator.clipboard && navigator.clipboard.writeText("https://efang.me/" + links[1]) }} ><FontAwesomeIcon icon={faCopy} className="mr-2" />Copy</button>
+                            <button className="btn btn-primary" onClick={() => {navigator.clipboard && navigator.clipboard.writeText("efang.me/" + links[1]) }} ><FontAwesomeIcon icon={faCopy} className="mr-2" />Copy</button>
                           </div>
                         </div>
                       </li>)

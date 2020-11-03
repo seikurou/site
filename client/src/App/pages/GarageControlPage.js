@@ -9,7 +9,7 @@ class GarageControlPage extends Component {
       currentGarageState: '',
       timeOfLastCycle: -1,
       isOpen: false,
-      loadingGarageState: false,
+      loadingGarageState: true,
       loadingData: true,
       data: []
     }
@@ -57,6 +57,7 @@ class GarageControlPage extends Component {
                      <div>
                       <h2 className={this.state.loadingGarageState ? "text-white" : ""}>Garage is {this.state.currentGarageState},</h2>
                       <p className="text-muted">and has been since {this.state.timeOfLastCycle}.</p>
+                      <p className="text-muted">By the way, today is {(new Date()).toDateString()}.</p>
                     </div>
                   
                 </div>
