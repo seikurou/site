@@ -30,7 +30,7 @@ class ProjectsPage extends Component {
                             <div className="card-body">
                               <h5 className="card-title">{proj.title}</h5>
                               <p className="card-text">{proj.description}</p>
-                              {proj.internalLinkText ? <Link to={proj.internalLink} className="btn btn-outline-primary mr-3 mb-3">{proj.internalLinkText}</Link> : null}
+                              {proj.internalLinkText ? <Link to={proj.internalLink} className="btn btn-primary mr-3 mb-3">{proj.internalLinkText}</Link> : null}
                               {proj.externalLinkText ? <a href={proj.externalLink} target="_blank" rel="noreferrer" className="btn btn-outline-success mr-3 mb-3">{proj.externalLinkText}</a> : null}
 
                             </div>
