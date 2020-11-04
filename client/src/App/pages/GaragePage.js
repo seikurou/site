@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSync } from '@fortawesome/free-solid-svg-icons'
-import { VictoryBar, VictoryChart, VictoryHistogram, VictoryAxis } from 'victory';
+import { VictoryVoronoiContainer, VictoryChart, VictoryHistogram, VictoryAxis } from 'victory';
 
 class GaragePage extends Component {
   constructor(props) {
@@ -26,16 +26,16 @@ class GaragePage extends Component {
     let rawData = await (response.json())
     rawData.sort(o => o.time)
     // rawData = rawData.map(k => { return { x: -(this.state.currTime.getTime() - k.time) / 3.6e+6 } })
-    rawData = rawData.map(k => { return { x:  new Date(k.time)}  })
+    // rawData = rawData.map(k => { return { x:  new Date(k.time)}  })
     this.setState({ data: rawData })
-    console.log(rawData)
+    // console.log(rawData)
   }
 
   refreshGarageState = async function () {
     this.setState({ loadingGarageState: true })
     const response = await fetch('/api/getdata/is_garage_open')
     const currState = await (response.json())
-    console.log(currState)
+    // console.log(currState)
     this.setState({
       isOpen: currState.open,
       currentGarageState: currState.open ? "open" : "closed",
@@ -83,19 +83,32 @@ class GaragePage extends Component {
               <p>Activity in the last 12 hours:</p>
               <div>
                 <VictoryChart
-                  domainPadding={{ x: 20 }}
+                  domainPadding={{ x: 10 }}
+                  containerComponent={
+                    <VictoryVoronoiContainer
+                    labels={({datum}) => datum.binnedData.map(data => (data.open ? "Opened " : "Closed ") + data.x.toLocaleTimeString())}
+                    />
+                  }
                 >
-                  {/* <VictoryAxis
-                    label="Hours ago"
-                  /> */}
+                  <VictoryAxis
+                    label="Time"
+                    scale={{ x: "time"}}
+                  />
+                  <VictoryAxis dependentAxis
+                    label="Activity Count"
+                    scale={{ x: "time", y: "time" }}
+                    tickValues={[0, 1, 2, 3, 4, 5, 6]}
+                  />
                   <VictoryHistogram
                     style={{
-                      data: { fill: "#c43a31" }
+                      data: { fill: "#0275d8" }
                     }}
-                    data={this.state.data}
+                    data={this.state.data
+                      .filter(k => k.time > this.state.currTime.getTime() - 4.32e+7)
+                      .map(k => { return { x: new Date(k.time), open:k.open } })}
 
                     // bins={[...Array(48).keys()].map(k => -12 + k / 4)}
-                    bins={[...Array(36).keys()].map(k => new Date(this.state.currTime.getTime() - 4.32e+7 + k*3.6e+6/3))}
+                    bins={[...Array(36).keys()].map(k => new Date(this.state.currTime.getTime() - 4.32e+7 + k * 3.6e+6 / 3))}
                   />
 
                 </VictoryChart>
