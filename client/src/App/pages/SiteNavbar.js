@@ -26,6 +26,11 @@ const SiteNavbar = () => {
               Projects
             </Link>
           </NavItem>
+          <NavItem>
+            <Link to='/art' className="nav-link">
+              Misc
+            </Link>
+          </NavItem>
         </Nav>
       </Navbar>
     </div>
