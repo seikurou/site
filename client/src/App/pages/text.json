@@ -95,39 +95,52 @@
     "gallery": [
         {
             "original": "/assets/plant.jpg",
-            "thumbnail": "/assets/plant.jpg",
+            "thumbnail": "/assets/plant-sm.jpg",
+            "originalAlt": "Houseplant",
+            "thumbnailAlt": "Houseplant",
             "description": "Houseplant"
         },
         {
             "original": "/assets/minecraft.jpg",
-            "thumbnail": "/assets/minecraft.jpg",
+            "thumbnail": "/assets/minecraft-sm.jpg",
+            "originalAlt": "Minecraft",
+            "thumbnailAlt": "Minecraft",
             "description": "Minecraft"
         },
         {
             "original": "/assets/eve.jpg",
-            "thumbnail": "/assets/eve.jpg",
+            "thumbnail": "/assets/eve-sm.jpg",
+            "originalAlt": "My Older Sister",
+            "thumbnailAlt": "My Older Sister",
             "description": "My Older Sister"
         },
         {
             "original": "/assets/flower.jpg",
-            "thumbnail": "/assets/flower.jpg",
+            "thumbnail": "/assets/flower-sm.jpg",
+            "originalAlt": "California Popp",
+            "thumbnailAlt": "California Popp",
             "description": "California Poppy"
         },
         {
             "original": "/assets/duck.jpg",
-            "thumbnail": "/assets/duck.jpg",
+            "thumbnail": "/assets/duck-sm.jpg",
+            "originalAlt": "Duck",
+            "thumbnailAlt": "Duck",
             "description": "Duck"
         },
         {
             "original": "/assets/squirrel.jpg",
-            "thumbnail": "/assets/squirrel.jpg",
+            "thumbnail": "/assets/squirrel-sm.jpg",
+            "originalAlt": "Squirrel",
+            "thumbnailAlt": "Squirrel",
             "description": "Squirrel"
         },
         {
             "original": "/assets/campanile.jpg",
-            "thumbnail": "/assets/campanile.jpg",
+            "thumbnail": "/assets/campanile-sm.jpg",
+            "originalAlt": "Campanile",
+            "thumbnailAlt": "Campanile",
             "description": "Campanile (at Berkeley)"
         }
-
     ]
 }

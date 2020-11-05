@@ -17,12 +17,8 @@ class ArtPage extends Component {
         <div className="fluid-container" style={{ overflowX: "hidden" }}>
           <FadeIn>
             <div className="row justify-content-center ">
-              <div className="col-10 col-lg-8 col-xl-10 ">
-                <div className="fluid-container">
-                  <div className="row justify-content-center">
-                    <ImageGallery items={json.gallery} showFullscreenButton={false} showPlayButton={false}  />
-                  </div>
-                </div>
+              <div className="col-11 col-md-10">
+                <ImageGallery items={json.gallery} showFullscreenButton={false} showPlayButton={false} />
               </div>
             </div>
           </FadeIn>
