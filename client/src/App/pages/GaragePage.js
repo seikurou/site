@@ -80,12 +80,15 @@ class GaragePage extends Component {
           </div>
           <div className="row justify-content-center">
             <div className="col-10 col-lg-8">
-              <p>Activity in the last 12 hours:</p>
+              <p>Activity in the last 24 hours:</p>
               <div>
                 <VictoryChart
                   domainPadding={{ x: 10 }}
                   containerComponent={
                     <VictoryVoronoiContainer
+                    style={{
+                      touchAction: "auto"
+                    }}
                     labels={({datum}) => datum.binnedData.map((data, i) => (i ? "\n" : "") + (data.open ? "Opened " : "Closed ") + data.x.toLocaleTimeString() ) }
                     />
                   }
@@ -97,18 +100,18 @@ class GaragePage extends Component {
                   <VictoryAxis dependentAxis
                     label="Activity Count"
                     scale={{ x: "time", y: "time" }}
-                    tickValues={[0, 1, 2, 3, 4, 5, 6]}
+                    tickValues={[0, 1, 2, 4, 8, 12]}
                   />
                   <VictoryHistogram
                     style={{
                       data: { fill: "#0275d8" }
                     }}
                     data={this.state.data
-                      .filter(k => k.time > this.state.currTime.getTime() - 1000*60*60*12)
+                      .filter(k => k.time > this.state.currTime.getTime() - 1000*60*60*24)
                       .map(k => { return { x: new Date(k.time), open:k.open } })}
 
                     // bins={[...Array(48).keys()].map(k => -12 + k / 4)}
-                    bins={[...Array(36+1).keys()].map(k => new Date(this.state.currTime.getTime() - 1000*60*60*12 + k * 1000*60*60*12 / 36))}
+                    bins={[...Array(36+1).keys()].map(k => new Date(this.state.currTime.getTime() - 1000*60*60*24 + k * 1000*60*60*24 / 36))}
                   />
 
                 </VictoryChart>
