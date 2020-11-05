@@ -86,7 +86,7 @@ class GaragePage extends Component {
                   domainPadding={{ x: 10 }}
                   containerComponent={
                     <VictoryVoronoiContainer
-                    labels={({datum}) => datum.binnedData.map(data => (data.open ? "Opened " : "Closed ") + data.x.toLocaleTimeString())}
+                    labels={({datum}) => datum.binnedData.map((data, i) => (i ? "\n" : "") + (data.open ? "Opened " : "Closed ") + data.x.toLocaleTimeString() ) }
                     />
                   }
                 >
@@ -104,11 +104,11 @@ class GaragePage extends Component {
                       data: { fill: "#0275d8" }
                     }}
                     data={this.state.data
-                      .filter(k => k.time > this.state.currTime.getTime() - 4.32e+7)
+                      .filter(k => k.time > this.state.currTime.getTime() - 1000*60*60*12)
                       .map(k => { return { x: new Date(k.time), open:k.open } })}
 
                     // bins={[...Array(48).keys()].map(k => -12 + k / 4)}
-                    bins={[...Array(36).keys()].map(k => new Date(this.state.currTime.getTime() - 4.32e+7 + k * 3.6e+6 / 3))}
+                    bins={[...Array(36+1).keys()].map(k => new Date(this.state.currTime.getTime() - 1000*60*60*12 + k * 1000*60*60*12 / 36))}
                   />
 
                 </VictoryChart>
