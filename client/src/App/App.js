@@ -9,6 +9,7 @@ import UrlShortenerPage from './pages/UrlShortenerPage';
 import GaragePage from './pages/GaragePage'
 import WeatherMonitorPage from './pages/WeatherMonitorPage';
 import ArtPage from './pages/ArtPage';
+import CalendarPage from './pages/CalendarPage';
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path='/garage' component={GaragePage}/>
           <Route exact path ='/weathermonitor' component={WeatherMonitorPage}/>
           <Route exact path='/art' component={ArtPage}/>
+          <Route exact path='/calendars' component={CalendarPage}/>
         </Switch>
       </div>
     )
