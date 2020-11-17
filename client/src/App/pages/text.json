@@ -36,6 +36,17 @@
             "externalLink": "https://github.com/seikurou/site"
         },
         {
+            "title": "Calendar Maker",
+            "catchPhrase": "For people who still use paper.",
+            "imageLink": "/assets/calendar.jpg",
+            "imageAlt": "Calendar",
+            "description": "Generate your own printable calendars. Choose from monthly and weekly templates. Customize dates. If your weeks start on Tuesdays, that's also cool. Inspired by CalendarsThatWork.com. This website communicates with a Django app/API hosted on PythonAnywhere. Python backends are... interesting.",
+            "internalLinkText": "Make some!",
+            "internalLink": "/calendars",
+            "externalLinkText": "Github",
+            "externalLink": "https://github.com/seikurou/Calendar-Maker"
+        },
+        {
             "title": "Temperature Monitor",
             "catchPhrase": "Lives outside the Pyrex container.",
             "imageLink": "/assets/dht11.jpg",
