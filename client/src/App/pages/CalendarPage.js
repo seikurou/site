@@ -38,7 +38,7 @@ class CalendarPage extends Component {
     console.log(this.state.date.slice(5, 7))
     // jsonObj = { template:"MonthlyLandscape.docx", year:2020,month:10,day:1,cnt:1,start_day:0}
     console.log(jsonObj)
-    const response = await fetch('http://seikurou.pythonanywhere.com/make_calendar/', {
+    const response = await fetch('https://seikurou.pythonanywhere.com/make_calendar/', {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -48,7 +48,7 @@ class CalendarPage extends Component {
     })
     const link = (await response.json()).link
     this.setState((state) => {
-      return { calendarLink: 'http://seikurou.pythonanywhere.com/file/' + link }
+      return { calendarLink: 'https://seikurou.pythonanywhere.com/file/' + link }
     })
     this.setState({ calendarLinkExists: true })
     this.setState({ loading: false })
