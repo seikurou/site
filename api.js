@@ -58,7 +58,7 @@ router.get('/getdata/is_garage_open', async (req, res) => {
 })
 
 router.get('/getdata/all_garage_data', async (req, res) => {
-    GarageState.find().sort("time").exec((error, data) => {
+    GarageState.find().sort("time").limit(50).exec((error, data) => {
         if (error) {
             res.sendStatus(400)
         } else {
@@ -79,7 +79,7 @@ router.get('/getdata/current_temperature', async (req, res) => {
 })
 
 router.get('/getdata/all_temperature_data', async (req, res) => {
-    Temperature.find().sort("time").exec((error, data) => {
+    Temperature.find().sort("time").limit(2000).exec((error, data) => {
         if (error) {
             res.sendStatus(400)
         } else {

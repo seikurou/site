@@ -1,5 +1,5 @@
 const express = require('express')
-const helmet = require('helmet')
+// const helmet = require('helmet')
 const path = require('path')
 const app = express()
 
@@ -20,7 +20,7 @@ const api_route = require('./api')
 // app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.use(helmet())
+// app.use(helmet())
 
 app.use('/api', api_route)
 
